@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="dark" data-toggled="close">
+
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> ERPPlus </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+	<meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../Plus Logo.png" type="image/x-icon">
+
+    <!-- Choices JS -->
+    <script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="assets/js/main.js"></script>
+	 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="assets/css/styles.min.css" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="assets/css/icons.css" rel="stylesheet" >
+    <link href="assets/icon-fonts/boxicons/css/boxicons.css" rel="stylesheet"/>
+
+    <!-- Node Waves Css -->
+    <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet" >
+
+    <!-- Simplebar Css -->
+    <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet" >
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
+    
+
+<link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
+
+<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <style>
+
+        .Main-menu-ico {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            padding-right: 3.5rem !important;
+            padding-left: 3.5rem !important;
+            transition: background-color 0.3s ease;
+        }
+
+        .Main-menu-modul-ico {
+            font-size: 4.3125rem;
+        }
+
+        .pb-ico {
+            padding-bottom: 2rem;
+
+        }
+        @media screen and (min-width: 996px) {
+            .pb-ico {
+		   width: 20%;
+  }
+}
+
+.btn:hover svg path {
+        fill: #ffffff; /* Change this to your desired hover color */
+    }
+.header-logo{    margin-right: 2rem;
+    margin-top: 22px;}
+    @media (min-width:992px) {
+    .app-content {
+        min-height: calc(100vh - 7.5rem);
+        margin-block-end: 0;
+        margin-block-start: 3.75rem;
+        margin-inline-start: 1rem;
+        transition: all 50ms ease
+    }
+}
+
+@media (min-width:992px) {
+    .app-header {
+        padding-inline-start: 1rem
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-default" id="offcanvasRightLabel">Module Settings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="col-xl-12">
+               
+            </div>
+           
+        </div>
+    </div>
+    <!-- End Switcher -->
+
+
+    <!-- Loader -->
+    <div id="loader" >
+        <img src="https://spruko.com/demo/aspnet/ynex/dist/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+         <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+ 
+               
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+  
+                     <!-- Start::header-element -->
+                     <div class="header-element">
+                        
+                            <a href="index.html" class="header-logo">
+                                <img src="ERPLogo.png" alt="logo" width="110" style="position: fixed;top:10px"  >
+                              
+                            </a>
+                        
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-left -->
+
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="bx bx-search-alt-2 header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element country-selector">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown">
+                            <img src="assets/images/flags/us_flag.jpg" alt="img" class="rounded-circle header-link-icon">
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/us_flag.jpg" alt="img">
+                                    </span>
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/saudi-flag.png" alt="img" >
+                                    </span>
+                                    Arabic
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/french_flag.jpg" alt="img" >
+                                    </span>
+                                    French
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/germany_flag.jpg" alt="img" >
+                                    </span>
+                                    German
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/italy_flag.jpg" alt="img" >
+                                    </span>
+                                    Italian
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
+                                    <span class="avatar avatar-xs lh-1 me-2">
+                                        <img src="assets/images/flags/russia_flag.jpg" alt="img" >
+                                    </span>
+                                    Russian
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-theme-mode">
+                        <!-- Start::header-link|layout-setting -->
+                        <a href="javascript:void(0);" class="header-link layout-setting">
+                            <span class="light-layout">
+                                <!-- Start::header-link-icon -->
+                            <i class="bx bx-moon header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                            <span class="dark-layout">
+                                <!-- Start::header-link-icon -->
+                            <i class="bx bx-sun header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                        </a>
+                        <!-- End::header-link|layout-setting -->
+                    </div>
+                    <!-- End::header-element -->
+
+                
+
+                    <!-- Start::header-element -->
+                    <div class="header-element notifications-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="messageDropdown" aria-expanded="false">
+                            <i class="bx bx-bell header-link-icon"></i>
+                            <span class="badge bg-secondary rounded-pill header-icon-badge pulse pulse-secondary" id="notification-icon-badge">5</span>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-semibold">Notifications</p>
+                                    <span class="badge bg-secondary-transparent" id="notifiation-data">5 Unread</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <ul class="list-unstyled mb-0" id="header-notification-scroll">
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                         <div class="pe-2">
+                                             <span class="avatar avatar-md bg-primary-transparent avatar-rounded"><i class="ti ti-gift fs-18"></i></span>
+                                         </div>
+                                         <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold"><a href="notifications.html">Your Order Has Been Shipped</a></p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Order No: 123456 Has Shipped To Your Delivery Address</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                         <div class="pe-2">
+                                             <span class="avatar avatar-md bg-secondary-transparent avatar-rounded"><i class="ti ti-discount-2 fs-18"></i></span>
+                                         </div>
+                                         <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold"><a href="notifications.html">Discount Available</a></p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Discount Available On Selected Products</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                         <div class="pe-2">
+                                             <span class="avatar avatar-md bg-pink-transparent avatar-rounded"><i class="ti ti-user-check fs-18"></i></span>
+                                         </div>
+                                         <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold"><a href="notifications.html">Account Has Been Verified</a></p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Your Account Has Been Verified Sucessfully</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                         <div class="pe-2">
+                                             <span class="avatar avatar-md bg-warning-transparent avatar-rounded"><i class="ti ti-circle-check fs-18"></i></span>
+                                         </div>
+                                         <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold"><a href="notifications.html">Order Placed <span class="text-warning">ID: #1116773</span></a></p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Order Placed Successfully</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                         <div class="pe-2">
+                                             <span class="avatar avatar-md bg-success-transparent avatar-rounded"><i class="ti ti-clock fs-18"></i></span>
+                                         </div>
+                                         <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold"><a href="notifications.html">Order Delayed <span class="text-success">ID: 7731116</span></a></p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Order Delayed Unfortunately</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="p-3 empty-header-item1 border-top">
+                                <div class="d-grid">
+                                    <a href="notifications.html" class="btn btn-primary">View All</a>
+                                </div>
+                            </div>
+                            <div class="p-5 empty-item1 d-none">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                        <i class="ri-notification-off-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-semibold mt-3">No New Notifications</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-shortcuts-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="notificationDropdown" aria-expanded="false">
+                            <i class="bx bx-grid-alt header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown header-shortcuts-dropdown dropdown-menu pb-0 dropdown-menu-end" aria-labelledby="notificationDropdown">
+                            <div class="p-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-semibold">Recently Used Apps</p>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider mb-0"></div>
+                            <div class="main-header-shortcuts p-2" id="header-shortcut-scroll">
+                               <div class="row g-2">
+                                   <div class="col-4">
+                                       <a href="index.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #acacaf;"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg>
+                                                </span>
+                                                <span class="d-block fs-12">Home</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#988686" stroke="none">
+                                                            <path d="M2472 4080 c-333 -46 -583 -319 -599 -655 -6 -130 13 -223 71 -340 113 -229 332 -372 587 -383 136 -6 229 14 347 73 350 177 479 593 294 950 -55 106 -182 229 -292 282 -137 67 -274 91 -408 73z m238 -196 c201 -56 348 -240 366 -458 8 -90 -21 -216 -69 -294 -175 -289 -569 -339 -807 -102 -126 126 -179 315 -135 483 75 289 357 451 645 371z"/>
+                                                            <path d="M985 3434 c-228 -35 -413 -200 -470 -420 -65 -249 62 -520 296 -632 128 -62 231 -75 362 -47 200 42 370 205 421 401 20 77 20 212 1 284 -49 185 -200 340 -383 394 -57 16 -178 27 -227 20z m212 -205 c71 -27 160 -110 198 -186 28 -53 30 -67 30 -163 0 -95 -3 -111 -28 -162 -39 -79 -104 -143 -185 -181 -60 -29 -77 -32 -157 -32 -76 0 -99 4 -148 27 -80 38 -158 114 -193 191 -26 54 -29 73 -29 157 0 82 4 103 27 152 51 109 157 194 268 218 60 12 151 3 217 -21z"/>
+                                                            <path d="M3958 3425 c-38 -7 -98 -28 -135 -46 -92 -45 -208 -160 -251 -249 -177 -361 62 -775 464 -807 243 -19 481 144 564 387 27 78 32 216 11 300 -47 191 -209 357 -394 406 -81 21 -184 25 -259 9z m184 -176 c241 -51 372 -308 268 -527 -52 -109 -134 -178 -250 -208 -222 -57 -443 100 -467 332 -15 139 66 292 188 359 92 50 171 63 261 44z"/>
+                                                            <path d="M1905 2580 c-129 -27 -262 -111 -358 -225 -52 -62 -63 -71 -102 -77 -29 -4 -60 -19 -94 -47 -29 -22 -82 -55 -119 -73 -63 -31 -72 -33 -177 -33 -102 0 -115 2 -175 31 -36 17 -86 47 -111 66 -66 51 -82 58 -133 58 -257 0 -481 -223 -547 -545 -71 -346 78 -635 359 -694 83 -17 1152 -15 1220 3 44 11 62 11 110 0 83 -20 1481 -20 1564 0 48 11 66 11 110 0 68 -18 1137 -20 1220 -3 329 69 469 451 312 848 -34 86 -104 192 -165 251 -88 85 -221 140 -335 140 -51 0 -67 -7 -133 -58 -25 -19 -75 -49 -111 -66 -60 -29 -73 -31 -175 -31 -129 0 -176 16 -285 99 -47 36 -77 50 -108 54 -37 4 -47 11 -77 52 -73 100 -199 193 -313 231 -51 18 -90 23 -162 24 l-95 0 -70 -54 c-257 -199 -533 -198 -792 1 -67 52 -69 53 -143 55 -41 1 -93 -2 -115 -7z m180 -215 c154 -115 343 -174 521 -162 154 11 269 53 412 150 91 62 108 66 193 41 181 -53 341 -263 393 -516 21 -99 21 -276 1 -353 -44 -167 -168 -290 -310 -306 l-30 -4 -5 258 c-5 257 -5 259 -29 278 -33 27 -84 24 -118 -5 l-28 -24 -3 -256 -3 -256 -519 0 -519 0 -3 256 -3 256 -28 24 c-38 32 -90 32 -122 -1 l-25 -24 0 -255 0 -255 -32 6 c-160 30 -272 143 -313 314 -17 74 -20 229 -4 315 47 267 200 479 394 546 82 29 112 24 180 -27z m-1408 -299 c119 -84 242 -126 371 -126 100 0 168 14 251 51 35 16 65 29 66 29 1 0 -8 -33 -19 -72 -16 -59 -20 -105 -20 -243 -1 -152 2 -178 22 -245 27 -84 63 -159 98 -207 13 -17 24 -34 24 -37 0 -3 -180 -6 -400 -6 l-400 0 0 180 c0 206 -6 231 -64 250 -28 9 -40 8 -65 -5 -17 -8 -35 -24 -41 -34 -6 -12 -10 -96 -10 -200 0 -205 3 -198 -79 -156 -168 85 -212 359 -96 604 60 126 132 199 228 232 71 25 80 24 134 -15z m3940 -2 c172 -83 292 -392 239 -615 -24 -102 -84 -181 -163 -214 -65 -27 -63 -33 -63 166 0 104 -4 188 -10 200 -6 10 -24 26 -41 34 -25 13 -37 14 -65 5 -58 -19 -64 -44 -64 -250 l0 -180 -400 0 c-220 0 -400 3 -400 6 0 3 11 20 24 37 41 54 94 178 110 259 20 99 20 291 0 383 -8 39 -17 82 -21 97 l-5 28 63 -29 c83 -37 151 -51 251 -51 129 0 267 48 373 129 34 26 46 30 80 26 22 -3 63 -17 92 -31z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Employees</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#8F5A60" stroke="none">
+                                                            <path d="M795 4882 c-43 -20 -101 -79 -116 -119 -5 -13 -9 -73 -9 -133 l0 -109 -253 -3 -254 -3 -49 -30 c-30 -19 -60 -49 -79 -79 l-30 -49 0 -296 c0 -326 0 -324 66 -390 42 -42 80 -61 140 -68 l49 -6 0 -1591 c0 -1121 3 -1603 11 -1631 14 -52 90 -126 145 -143 60 -18 4228 -18 4288 0 54 16 131 93 145 144 8 27 11 524 11 1630 l0 1591 49 6 c60 7 98 26 140 68 66 66 66 64 66 390 l0 296 -30 49 c-19 30 -49 60 -79 79 l-49 30 -254 3 -253 3 0 110 c0 88 -4 117 -19 147 -79 156 -287 162 -371 12 -21 -39 -25 -60 -28 -157 l-4 -113 -128 0 -128 0 -4 113 c-3 97 -7 118 -28 157 -71 126 -238 146 -335 39 -50 -55 -55 -75 -55 -200 l0 -109 -663 0 -664 0 -21 -23 c-31 -33 -29 -80 4 -106 26 -21 34 -21 685 -21 l659 0 0 -110 c0 -89 4 -118 19 -148 64 -125 207 -158 319 -75 57 43 76 93 80 221 l4 112 128 0 128 0 4 -112 c4 -128 23 -178 80 -221 112 -83 255 -50 319 75 15 30 19 59 19 148 l0 110 231 0 231 0 29 -29 29 -29 0 -252 0 -252 -29 -29 -29 -29 -2352 0 -2352 0 -29 29 -29 29 0 246 c0 158 4 254 11 269 19 43 46 47 284 47 l225 0 0 -110 c0 -89 4 -118 19 -148 64 -125 207 -158 319 -75 57 43 76 93 80 221 l4 112 128 0 128 0 4 -112 c4 -128 23 -178 80 -221 112 -83 255 -50 319 75 17 34 19 62 19 333 0 271 -2 299 -19 333 -79 156 -287 162 -371 12 -21 -39 -25 -60 -28 -157 l-4 -113 -128 0 -128 0 -4 113 c-3 97 -7 118 -28 157 -52 93 -173 135 -265 92z m121 -146 c18 -14 19 -29 19 -291 0 -262 -1 -277 -19 -291 -26 -19 -55 -18 -78 3 -17 15 -18 37 -18 286 0 238 2 273 17 289 19 22 52 23 79 4z m686 -3 c17 -15 18 -37 18 -286 0 -238 -2 -273 -17 -289 -19 -22 -52 -23 -79 -4 -18 14 -19 30 -22 285 -3 261 -2 271 18 291 24 24 57 26 82 3z m1994 3 c18 -14 19 -29 19 -291 0 -262 -1 -277 -19 -291 -26 -19 -55 -18 -78 3 -17 15 -18 37 -18 286 0 238 2 273 17 289 19 22 52 23 79 4z m686 -3 c17 -15 18 -37 18 -286 0 -238 -2 -273 -17 -289 -19 -22 -52 -23 -79 -4 -18 14 -19 30 -22 285 -3 261 -2 271 18 291 24 24 57 26 82 3z m428 -2723 l0 -1591 -25 -24 -24 -25 -2101 0 -2101 0 -24 25 -25 24 0 1591 0 1590 2150 0 2150 0 0 -1590z"/>
+                                                            <path d="M635 3375 l-25 -24 0 -1366 0 -1366 25 -24 24 -25 494 0 c472 0 496 1 518 19 l24 19 3 367 c2 283 5 366 15 361 179 -80 274 -102 417 -93 114 7 192 27 282 73 l68 33 0 -314 0 -315 -265 0 -266 0 -24 -25 c-32 -31 -32 -69 0 -100 l24 -25 1256 0 1256 0 24 25 25 24 0 1366 0 1366 -25 24 -24 25 -1901 0 -1901 0 -24 -25z m915 -495 l0 -370 -395 0 -395 0 0 370 0 370 395 0 395 0 0 -370z m930 56 l0 -315 -82 39 c-206 96 -466 90 -655 -15 l-43 -24 0 315 0 314 390 0 390 0 0 -314z m940 -56 l0 -370 -390 0 -390 0 0 370 0 370 390 0 390 0 0 -370z m940 0 l0 -370 -395 0 -395 0 0 370 0 370 395 0 395 0 0 -370z m-2125 -320 c167 -43 311 -159 383 -312 47 -97 62 -161 62 -263 0 -102 -15 -166 -62 -263 -72 -153 -216 -269 -383 -312 -140 -36 -262 -24 -395 37 -199 91 -330 281 -346 503 -21 275 184 549 458 616 81 19 194 17 283 -6z m-825 -263 c-49 -109 -64 -180 -64 -312 0 -132 15 -203 64 -312 l29 -63 -340 0 -339 0 0 375 0 375 339 0 340 0 -29 -63z m2010 -312 l0 -375 -341 0 c-269 0 -340 3 -336 13 71 168 87 233 87 362 0 129 -16 194 -87 363 -4 9 67 12 336 12 l341 0 0 -375z m940 0 l0 -375 -392 2 -393 3 -3 360 c-1 198 0 366 3 372 3 10 91 13 395 13 l390 0 0 -375z m-2810 -895 l0 -370 -395 0 -395 0 0 370 0 370 395 0 395 0 0 -370z m1870 0 l0 -370 -390 0 -390 0 0 370 0 370 390 0 390 0 0 -370z m940 0 l0 -370 -395 0 -395 0 0 370 0 370 395 0 395 0 0 -370z"/>
+                                                            <path d="M3859 2929 c-25 -9 -49 -45 -49 -73 0 -7 9 -25 21 -40 20 -25 23 -26 139 -26 110 0 121 2 140 22 37 40 22 98 -31 117 -38 13 -184 13 -220 0z"/>
+                                                            <path d="M2335 2138 c-11 -6 -79 -61 -150 -122 -72 -61 -138 -117 -148 -125 -16 -13 -26 -6 -101 68 -93 90 -119 99 -161 56 -47 -46 -37 -67 93 -197 99 -100 123 -118 149 -118 25 0 59 24 179 126 218 186 244 212 244 250 0 23 -8 39 -26 53 -30 23 -50 26 -79 9z"/>
+                                                            <path d="M2914 1156 c-48 -21 -60 -80 -24 -116 18 -18 33 -20 139 -20 117 0 120 1 140 26 12 15 21 33 21 40 0 29 -25 64 -53 74 -42 14 -186 12 -223 -4z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Attendance</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <!-- <img src="assets/images/apps/calender.png" alt=""> -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#3e745c" stroke="none">
+                                                            <path d="M1345 5111 c-11 -5 -29 -19 -40 -31 -18 -20 -20 -39 -23 -169 l-3 -148 -552 -147 c-304 -81 -564 -152 -579 -158 -36 -14 -58 -49 -58 -93 0 -20 79 -332 176 -692 96 -361 172 -659 167 -663 -4 -4 -94 -64 -198 -132 -105 -69 -201 -137 -213 -153 l-22 -28 0 -1161 c0 -952 3 -1170 14 -1212 40 -150 160 -270 311 -310 67 -18 4372 -21 4457 -3 157 33 293 170 327 327 8 37 11 392 11 1211 l0 1158 -27 27 c-25 25 -181 131 -346 235 -48 31 -66 48 -63 60 13 45 289 1082 316 1184 50 197 42 223 -80 261 -43 13 -303 84 -579 157 l-500 132 -3 148 c-3 147 -3 149 -31 176 l-27 28 -1208 2 c-664 1 -1216 -2 -1227 -6z m2283 -1712 l2 -1507 -530 -346 c-291 -190 -534 -346 -539 -346 -6 0 -249 156 -541 346 l-530 346 0 1503 c0 826 3 1505 7 1508 3 4 484 6 1067 5 l1061 -3 3 -1506z m-2348 1031 l0 -109 -42 -11 c-174 -46 -338 -92 -361 -102 -44 -17 -60 -50 -61 -128 -1 -58 -5 -72 -25 -94 -14 -14 -31 -26 -39 -26 -8 0 -29 -15 -48 -34 -25 -25 -34 -43 -34 -67 0 -19 38 -178 84 -354 78 -296 87 -322 115 -347 45 -40 93 -38 137 6 24 24 34 43 34 66 0 17 -32 151 -71 296 l-71 264 40 44 c47 51 71 94 87 156 l11 45 119 32 c65 18 120 31 122 30 2 -2 2 -468 1 -1035 l-3 -1031 -211 138 -210 138 -69 254 c-37 140 -157 585 -266 989 -109 403 -197 735 -196 736 4 3 933 252 945 253 9 1 12 -27 12 -109z m3044 -16 c259 -70 472 -127 473 -128 1 -1 -115 -436 -258 -966 -143 -531 -262 -976 -266 -989 -4 -17 -62 -61 -217 -162 l-211 -139 -3 1032 c-1 567 -1 1033 1 1035 2 1 57 -12 122 -30 l119 -32 11 -45 c16 -62 40 -105 87 -156 l40 -44 -71 -265 c-39 -145 -71 -276 -71 -289 0 -92 103 -139 171 -78 28 25 37 50 90 247 124 462 122 449 105 489 -10 25 -27 41 -53 53 -21 9 -50 28 -65 42 -25 22 -28 32 -28 88 0 83 -18 117 -72 137 -37 13 -371 106 -384 106 -2 0 -4 50 -4 110 0 61 3 110 6 110 4 0 218 -57 478 -126z m-3782 -1770 c21 -76 37 -143 35 -147 -3 -9 -267 161 -266 172 1 10 173 120 184 117 6 -2 27 -65 47 -142z m4181 86 c47 -30 85 -59 84 -64 -3 -11 -259 -178 -264 -172 -4 4 65 274 74 289 6 11 5 11 106 -53z m-3876 -671 c340 -221 624 -407 631 -413 11 -10 -108 -133 -620 -641 l-633 -628 -6 89 c-11 143 -10 1994 0 1994 5 0 288 -180 628 -401z m4063 -639 c0 -572 -3 -1040 -8 -1040 -4 0 -291 284 -637 630 -491 492 -627 633 -615 640 8 5 292 189 630 409 338 220 618 400 623 401 4 0 7 -468 7 -1040z m-2848 -159 c392 -258 465 -301 507 -301 17 0 168 94 451 279 l425 279 648 -646 647 -647 -277 -6 c-396 -9 -2346 -10 -3287 -2 l-798 6 648 648 c395 395 652 645 659 640 5 -4 175 -117 377 -250z"/>
+                                                            <path d="M1973 4678 c-25 -12 -50 -59 -58 -109 -7 -46 -41 -78 -91 -86 -51 -8 -90 -30 -103 -60 -7 -16 -11 -145 -11 -379 l0 -356 29 -29 c48 -47 130 -37 164 21 15 24 17 65 17 318 l0 290 30 10 c42 15 124 95 145 142 l18 40 447 0 448 0 13 -32 c19 -47 92 -122 139 -143 l40 -18 0 -289 c0 -253 2 -294 17 -318 34 -58 116 -68 164 -21 l29 29 0 357 c0 389 -2 402 -57 423 -15 6 -44 13 -64 16 -46 8 -78 43 -86 92 -8 51 -30 90 -60 103 -32 15 -1139 14 -1170 -1z"/>
+                                                            <path d="M2504 4141 c-36 -22 -58 -75 -48 -115 17 -70 115 -99 172 -51 55 46 46 137 -17 169 -40 21 -69 20 -107 -3z"/>
+                                                            <path d="M2451 3620 c-361 -50 -655 -325 -726 -679 -21 -101 -16 -293 9 -386 24 -91 108 -252 169 -326 105 -126 256 -225 422 -275 80 -24 106 -27 235 -27 129 0 155 3 235 27 288 87 504 306 587 593 31 106 33 343 4 443 -106 364 -412 612 -782 633 -49 3 -118 2 -153 -3z m259 -226 c175 -41 340 -172 419 -334 23 -47 48 -116 56 -155 70 -333 -135 -662 -466 -751 -85 -22 -234 -22 -319 0 -209 56 -382 219 -446 420 -53 167 -41 327 37 486 78 160 243 293 414 334 80 19 224 19 305 0z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Payroll</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#566ca1" stroke="none">
+                                                            <path d="M2341 5029 c-476 -53 -905 -256 -1251 -590 l-75 -72 -178 -53 c-98 -29 -187 -60 -198 -70 -28 -25 -25 -79 6 -109 28 -29 43 -30 114 -9 29 8 56 14 61 12 5 -2 -13 -38 -41 -80 -171 -265 -289 -616 -319 -943 -16 -181 -15 -202 20 -237 26 -25 36 -29 63 -24 54 10 63 31 71 168 21 358 127 687 313 971 25 37 49 67 54 67 5 0 9 -38 9 -85 0 -78 2 -88 25 -110 32 -33 78 -33 111 0 l26 26 -7 187 -8 187 84 80 c649 612 1618 708 2377 234 97 -60 102 -64 75 -70 -15 -4 -56 -7 -91 -8 -53 -1 -67 -5 -87 -26 -46 -45 -24 -119 38 -130 18 -2 118 -1 224 3 184 7 193 8 217 31 15 14 26 35 26 50 0 43 -106 400 -125 421 -28 31 -88 27 -114 -6 -25 -32 -26 -49 -5 -121 9 -30 14 -56 12 -58 -2 -2 -34 17 -72 42 -215 142 -507 255 -791 304 -139 24 -431 33 -564 18z"/>
+                                                            <path d="M2474 4221 c-184 -48 -306 -233 -273 -415 11 -62 42 -133 77 -176 l20 -25 -57 -32 c-31 -17 -78 -50 -104 -73 l-47 -42 -51 56 c-28 31 -77 72 -109 92 l-58 36 27 44 c104 164 40 379 -137 462 -80 38 -184 38 -264 0 -178 -83 -241 -298 -137 -463 l28 -45 -42 -21 c-102 -53 -219 -206 -253 -334 -22 -82 -18 -130 12 -154 26 -20 37 -21 420 -21 l394 0 0 -34 c0 -19 9 -44 19 -57 l19 -24 602 0 602 0 19 24 c10 13 19 38 19 57 l0 34 394 0 c383 0 394 1 420 21 21 16 26 29 26 62 -1 144 -111 327 -250 413 l-58 36 27 44 c81 126 62 293 -46 400 -121 121 -327 120 -450 -3 -104 -104 -122 -272 -42 -397 l27 -44 -58 -36 c-32 -20 -81 -61 -109 -92 l-51 -56 -47 42 c-26 23 -73 56 -104 73 l-57 32 20 25 c149 184 86 464 -127 564 -63 30 -180 43 -241 27z m172 -170 c86 -39 136 -140 114 -231 -40 -165 -250 -215 -357 -85 -110 133 -15 335 157 335 25 0 63 -9 86 -19z m-946 -53 c57 -30 82 -65 88 -127 4 -41 0 -58 -21 -94 -85 -144 -311 -73 -295 92 6 61 39 108 92 132 54 24 83 24 136 -3z m1860 0 c57 -30 82 -65 88 -126 8 -92 -51 -162 -143 -170 -71 -6 -118 18 -152 75 -21 36 -25 53 -21 94 3 28 14 63 25 77 23 32 97 72 133 72 14 0 46 -10 70 -22z m-1871 -468 c83 -14 165 -57 222 -117 69 -72 80 -91 67 -119 l-11 -24 -354 0 c-283 0 -353 3 -353 13 0 22 55 101 99 144 52 50 132 90 203 102 29 5 55 9 58 10 3 0 34 -4 69 -9z m1930 -17 c56 -19 108 -51 151 -95 38 -38 90 -116 90 -135 0 -10 -70 -13 -353 -13 l-354 0 -11 24 c-13 28 -2 47 67 119 105 110 263 149 410 100z m-958 -27 c92 -20 163 -58 236 -129 58 -55 123 -158 123 -194 0 -11 -82 -13 -460 -13 -378 0 -460 2 -460 13 0 36 65 139 123 194 125 120 273 164 438 129z"/>
+                                                            <path d="M4263 4008 c-38 -42 -37 -59 17 -161 134 -256 209 -529 226 -830 8 -132 17 -153 71 -163 27 -5 37 -1 64 25 l32 32 -7 117 c-17 301 -89 579 -218 840 -33 67 -72 131 -86 142 -33 26 -74 25 -99 -2z"/>
+                                                            <path d="M1074 3027 c-28 -14 -60 -38 -71 -53 -11 -16 -149 -321 -307 -679 -315 -712 -312 -704 -268 -791 29 -58 46 -69 213 -144 125 -57 164 -70 205 -70 76 0 131 33 173 103 19 31 39 57 45 57 6 0 40 -15 76 -33 71 -35 70 -33 103 -177 l15 -65 -46 -90 c-39 -79 -45 -98 -45 -157 -2 -127 78 -230 204 -265 57 -16 59 -18 59 -49 0 -52 37 -138 77 -179 72 -74 177 -102 277 -74 39 11 40 10 74 -30 19 -23 55 -54 80 -69 42 -24 57 -27 139 -27 l91 -1 34 -43 c18 -24 58 -58 88 -75 48 -27 64 -31 130 -31 81 0 126 17 189 71 l32 27 56 -28 c164 -84 351 0 393 175 l12 50 42 0 c110 0 220 79 250 181 9 29 16 60 16 69 0 13 12 19 49 23 146 17 247 136 240 283 l-3 57 46 23 c82 42 137 130 138 220 l0 51 92 38 c61 26 93 34 96 27 29 -87 98 -149 177 -158 44 -6 68 0 190 46 179 67 218 89 250 145 52 87 55 76 -234 820 -250 646 -261 671 -301 707 -76 68 -145 65 -345 -15 -155 -62 -204 -100 -224 -173 -15 -54 -14 -70 13 -146 28 -78 31 -72 -74 -123 -89 -43 -127 -42 -248 7 -190 76 -243 90 -356 95 -130 7 -190 -5 -304 -58 l-84 -38 -49 24 c-123 63 -296 70 -499 21 -157 -38 -202 -35 -324 20 -55 25 -102 47 -104 49 -2 1 8 30 22 64 41 96 30 179 -31 243 -34 36 -315 160 -373 165 -33 3 -59 -3 -96 -20z m215 -192 c132 -58 151 -70 151 -91 0 -15 -547 -1261 -563 -1281 -16 -21 -42 -15 -164 39 -137 60 -143 64 -143 91 0 21 543 1260 562 1285 16 19 25 16 157 -43z m2759 -48 c22 -26 503 -1283 500 -1307 -3 -21 -16 -30 -93 -61 -179 -70 -194 -75 -210 -59 -8 8 -127 306 -265 663 -181 467 -248 652 -242 663 10 18 244 113 278 114 12 0 26 -6 32 -13z m-2400 -434 c90 -41 191 -42 370 -4 78 17 172 31 208 31 60 0 154 -16 154 -27 0 -8 -178 -174 -242 -225 -35 -28 -120 -88 -190 -134 -70 -46 -134 -94 -142 -106 -34 -48 -15 -98 70 -182 110 -110 219 -152 373 -143 111 7 151 17 361 99 187 73 287 96 346 80 31 -9 612 -333 721 -402 51 -33 58 -113 14 -162 -25 -28 -36 -33 -73 -32 -36 1 -81 22 -283 137 -132 75 -250 137 -262 137 -12 0 -34 -11 -49 -23 -33 -28 -37 -76 -9 -107 10 -11 123 -79 252 -151 128 -72 242 -143 253 -157 48 -60 6 -156 -72 -169 -35 -5 -62 8 -340 164 -167 94 -314 176 -326 182 -68 36 -142 -52 -98 -115 8 -11 130 -85 271 -165 273 -153 295 -170 295 -237 0 -26 -9 -43 -35 -69 -32 -32 -40 -35 -78 -30 -47 5 -353 174 -415 228 -56 50 -113 70 -191 70 -62 0 -69 2 -79 24 -20 44 -87 108 -137 131 -38 18 -68 24 -121 24 -69 0 -72 1 -78 26 -4 14 -28 47 -54 73 -52 52 -119 81 -187 81 -41 0 -42 1 -64 54 -24 60 -88 126 -143 149 -84 35 -184 28 -252 -18 l-35 -23 -15 45 c-27 78 -60 111 -155 155 -47 21 -87 41 -89 42 -1 2 77 183 174 402 97 220 178 404 181 411 5 12 16 8 171 -64z m1452 3 c191 -75 241 -89 322 -90 72 -1 82 2 167 45 l91 46 19 -51 c10 -28 83 -215 160 -415 78 -200 140 -368 138 -374 -1 -5 -44 -26 -94 -47 l-90 -38 -24 23 c-26 24 -666 391 -745 427 -39 18 -67 22 -139 21 -102 -1 -151 -14 -355 -93 -285 -112 -388 -118 -515 -30 -25 17 -45 35 -45 39 0 5 26 25 58 46 116 77 244 179 358 287 133 125 226 190 323 225 58 21 79 23 171 20 92 -3 116 -8 200 -41z m-1474 -1112 c11 -8 26 -26 32 -40 24 -51 14 -83 -70 -231 -77 -133 -86 -144 -121 -155 -70 -21 -143 36 -140 111 0 24 23 78 68 161 37 69 72 131 79 139 31 39 104 46 152 15z m320 -238 c51 -51 47 -72 -58 -278 -96 -190 -119 -218 -181 -218 -67 0 -124 62 -114 125 6 39 189 363 218 388 12 10 38 17 61 17 32 0 47 -7 74 -34z m312 -160 c27 -14 45 -40 57 -84 8 -28 -132 -304 -176 -344 -44 -42 -100 -39 -145 6 -24 24 -34 43 -34 64 0 38 153 336 183 357 27 19 80 19 115 1z m354 -195 c29 -26 33 -35 32 -78 0 -39 -11 -68 -63 -163 -81 -149 -97 -165 -162 -165 -45 0 -54 4 -80 33 -19 21 -29 43 -29 64 0 36 130 293 162 321 34 28 101 23 140 -12z m260 -161 c32 -20 49 -39 58 -64 31 -96 -69 -180 -158 -131 -57 31 -57 26 -13 113 23 45 41 88 41 97 0 22 19 18 72 -15z"/>
+                                                            <path d="M1175 2735 c-53 -52 -18 -135 57 -135 60 0 100 75 65 121 -33 43 -87 50 -122 14z"/>
+                                                            <path d="M3889 2651 c-34 -35 -37 -68 -8 -105 26 -33 88 -37 119 -6 29 29 27 84 -5 115 -33 33 -70 32 -106 -4z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">CRM</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#85894E" stroke="none">
+                                                            <path d="M1450 4970 l0 -150 -155 0 -155 0 2 -342 3 -343 73 -3 72 -3 0 271 0 270 80 0 80 0 0 -1265 0 -1265 -80 0 -80 0 0 920 0 920 -75 0 -75 0 0 -270 0 -269 -102 -3 -103 -3 -467 -675 -468 -675 0 -861 c0 -541 4 -881 10 -915 23 -119 105 -224 218 -277 l57 -27 1138 -3 1137 -2 0 75 0 75 -237 0 c-218 0 -242 2 -283 21 -56 25 -86 53 -113 104 -22 40 -22 41 -25 900 l-3 860 433 627 433 627 828 0 827 1 0 -265 c0 -146 -1 -265 -3 -265 -2 0 -46 18 -98 41 -52 23 -104 45 -116 49 -18 8 -32 -3 -100 -80 l-78 -89 -96 -1 -97 0 -81 89 -81 89 -197 -83 -198 -82 0 -121 0 -121 -65 -67 -65 -66 -121 5 -120 6 -84 -202 -83 -202 87 -80 86 -80 0 -100 -1 -100 -85 -75 c-53 -46 -84 -80 -81 -90 2 -8 39 -100 82 -204 l78 -189 116 6 116 6 71 -71 72 -71 -5 -116 -6 -117 202 -83 201 -83 63 67 c34 38 68 76 75 87 11 15 28 18 115 18 l102 0 80 -86 80 -87 118 51 117 50 0 -126 c0 -101 -4 -135 -19 -167 -23 -51 -89 -111 -138 -124 -25 -7 -292 -11 -795 -11 l-758 0 0 -75 0 -75 763 0 c847 0 832 -1 933 66 64 43 118 113 145 189 17 49 19 83 19 338 l0 283 70 69 71 70 121 0 121 0 78 189 c44 105 79 195 79 202 0 7 -38 47 -85 89 l-85 77 0 97 0 96 89 78 89 79 -50 121 c-28 67 -66 158 -84 202 l-32 80 -122 -4 -122 -4 -69 69 -69 68 0 493 0 493 -75 0 -75 0 0 213 0 212 -150 150 -150 150 0 477 0 478 -1335 0 -1335 0 0 -150z m2520 -327 l0 -328 -98 98 -97 97 -1013 0 -1012 0 0 -1185 0 -1185 -75 0 -75 0 0 1415 0 1415 1185 0 1185 0 0 -327z m-300 -583 l0 -300 300 0 300 0 0 -160 0 -160 -792 -2 -793 -3 -386 -557 c-212 -307 -389 -561 -392 -565 -4 -3 -7 456 -7 1020 l0 1027 885 0 885 0 0 -300z m325 20 l170 -170 -173 0 -172 0 0 170 c0 94 1 170 3 170 1 0 79 -76 172 -170z m-2855 -1365 l0 -575 -459 0 -460 0 397 575 397 574 63 1 62 0 0 -575z m2787 -185 l161 0 69 74 68 74 97 -41 98 -42 0 -100 0 -100 115 -115 115 -115 102 0 102 0 42 -100 42 -100 -74 -68 -74 -69 0 -162 0 -161 74 -67 74 -67 -43 -103 -42 -103 -98 4 -97 3 -119 -118 -119 -119 0 -96 0 -97 -97 -42 -98 -42 -66 71 -66 71 -166 0 -165 0 -66 -71 -65 -72 -105 43 -106 43 6 101 6 101 -115 114 -115 114 -100 -6 -100 -6 -41 100 c-22 55 -41 103 -41 107 0 4 32 36 70 71 l70 62 0 166 0 166 -72 67 -72 66 41 100 42 99 100 0 101 0 116 115 115 115 -3 99 -3 99 100 43 100 43 70 -75 70 -74 162 0z m-2177 -1354 c0 -503 4 -834 10 -867 6 -30 21 -76 35 -102 14 -27 25 -51 25 -53 0 -2 -334 -4 -742 -4 -726 0 -744 1 -788 21 -56 25 -86 53 -113 104 -22 40 -22 42 -25 878 l-3 837 801 0 800 0 0 -814z"/>
+                                                            <path d="M3791 2164 c-84 -23 -150 -63 -227 -139 -81 -81 -118 -149 -142 -266 -40 -193 50 -405 218 -517 210 -141 487 -110 658 73 311 332 77 868 -378 864 -41 0 -99 -7 -129 -15z m290 -167 c70 -34 142 -106 177 -177 24 -48 27 -67 27 -150 0 -81 -4 -103 -26 -150 -50 -107 -134 -176 -249 -206 -238 -61 -475 149 -446 395 16 138 113 255 254 308 62 22 197 13 263 -20z"/>
+                                                            <path d="M566 1698 c-53 -14 -131 -91 -145 -143 -7 -26 -11 -170 -11 -400 0 -401 1 -405 71 -472 64 -60 83 -63 478 -63 l357 0 55 28 c69 34 115 99 124 175 3 28 5 201 3 382 -3 323 -3 331 -27 378 -25 52 -71 92 -128 113 -47 16 -715 18 -777 2z m737 -149 c44 -20 47 -41 47 -385 0 -341 -4 -372 -45 -388 -9 -3 -169 -6 -356 -6 l-340 0 -24 25 -25 24 0 346 0 346 25 24 24 25 335 0 c224 0 343 -4 359 -11z"/>
+                                                            <path d="M720 1315 l0 -75 230 0 230 0 0 75 0 75 -230 0 -230 0 0 -75z"/>
+                                                            <path d="M720 1015 l0 -75 230 0 230 0 0 75 0 75 -230 0 -230 0 0 -75z"/>
+                                                            <path d="M730 405 l0 -75 75 0 75 0 0 75 0 75 -75 0 -75 0 0 -75z"/>
+                                                            <path d="M1030 405 l0 -75 75 0 75 0 0 75 0 75 -75 0 -75 0 0 -75z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">PM</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#946D50" stroke="none">
+                                                            <path d="M3490 5107 c-102 -28 -189 -120 -210 -222 -7 -35 -10 -175 -8 -407 3 -334 4 -355 24 -399 46 -99 137 -166 241 -176 83 -9 83 -10 83 -263 0 -151 4 -222 13 -239 32 -63 119 -85 174 -45 16 11 92 126 174 263 81 133 155 251 164 261 17 19 33 20 370 20 420 0 428 1 515 88 71 73 90 126 90 262 0 83 -3 101 -21 124 -26 33 -77 36 -105 5 -15 -17 -20 -42 -24 -129 -6 -122 -19 -151 -81 -182 -30 -16 -71 -18 -385 -18 -362 0 -390 -3 -446 -42 -16 -11 -83 -112 -158 -236 l-130 -217 0 155 c0 85 -5 172 -11 193 -21 76 -111 146 -187 147 -49 0 -96 24 -123 61 l-24 34 -3 348 c-3 333 -2 351 17 391 11 23 35 50 53 61 32 19 56 20 693 23 l660 2 44 -22 c65 -34 81 -70 81 -191 0 -110 6 -129 49 -146 24 -10 34 -10 60 3 39 21 44 42 39 178 -3 92 -8 121 -26 155 -34 66 -78 110 -140 140 l-57 28 -680 2 c-513 1 -691 -1 -725 -10z"/>
+                                                            <path d="M1544 4829 c-152 -18 -298 -91 -415 -208 -85 -85 -138 -172 -177 -289 -24 -72 -26 -93 -30 -312 l-5 -235 -40 -30 c-23 -17 -52 -52 -66 -80 -25 -47 -26 -59 -29 -227 -4 -202 6 -257 59 -321 47 -57 100 -80 196 -85 l81 -4 22 -93 c47 -205 168 -385 338 -504 l32 -22 0 -134 c0 -129 -1 -135 -26 -164 l-25 -30 -447 -3 -447 -3 -57 -27 c-73 -34 -132 -95 -159 -166 -20 -53 -21 -68 -15 -219 l7 -161 -54 -84 c-74 -113 -112 -191 -152 -311 -58 -174 -66 -231 -72 -482 -5 -229 -5 -230 -34 -289 -31 -64 -36 -114 -17 -177 15 -51 69 -114 122 -142 l41 -22 1805 -3 c1280 -2 1818 0 1850 8 153 37 228 208 151 345 l-29 51 -5 244 c-4 222 -7 255 -30 346 -44 170 -104 306 -202 454 l-43 65 8 140 c5 77 5 158 1 181 -18 98 -86 184 -180 228 -44 20 -63 21 -500 26 l-454 5 -21 28 c-18 25 -21 45 -24 160 l-3 132 37 25 c62 41 151 128 200 195 l46 63 107 4 c88 3 116 8 162 29 65 31 120 84 151 148 22 45 23 56 26 381 4 393 2 401 -74 477 l-52 52 -4 228 c-4 220 -5 230 -30 284 -51 111 -147 184 -260 198 l-53 6 -7 53 c-11 74 -48 141 -108 195 -91 82 -85 81 -585 83 -242 1 -472 -2 -511 -7z m920 -149 c79 -18 122 -68 137 -160 5 -35 19 -79 30 -97 24 -39 92 -73 145 -73 49 0 111 -35 140 -78 30 -44 36 -113 32 -379 -3 -207 -4 -224 -23 -241 -19 -18 -156 -72 -182 -72 -10 0 -13 39 -13 160 0 161 -10 240 -37 295 -53 104 -157 173 -277 182 -58 5 -95 0 -187 -22 -158 -38 -293 -38 -439 0 -189 49 -316 22 -414 -86 -75 -83 -86 -128 -86 -344 0 -141 -3 -185 -12 -185 -29 0 -172 54 -189 71 -18 18 -19 38 -19 277 0 288 7 337 64 450 82 163 243 278 424 301 91 12 857 13 906 1z m-711 -631 c172 -44 357 -43 513 1 161 46 270 5 303 -116 6 -21 11 -118 11 -214 0 -147 3 -181 18 -210 22 -44 75 -80 118 -80 l34 0 0 -178 c0 -153 -11 -279 -26 -304 -3 -4 -25 4 -51 17 -43 23 -56 25 -197 25 -138 0 -154 -2 -191 -23 -109 -62 -137 -213 -58 -308 37 -43 93 -69 174 -77 l70 -7 -53 -35 c-132 -86 -284 -126 -448 -117 -199 10 -353 79 -495 222 -74 74 -98 105 -132 175 -64 131 -75 194 -77 415 l-1 189 38 7 c43 7 81 32 111 73 19 25 21 45 26 240 l5 213 29 37 c35 46 95 75 154 76 24 0 80 -9 125 -21z m1327 -625 l0 -176 -29 -29 c-26 -26 -36 -29 -90 -29 l-61 0 0 139 0 140 53 24 c31 14 68 42 88 66 19 22 35 41 37 41 1 0 2 -79 2 -176z m-2096 122 c26 -26 61 -50 85 -57 l41 -12 0 -144 0 -143 -49 0 c-118 0 -131 24 -131 240 0 88 2 160 5 160 2 0 24 -20 49 -44z m2092 -582 c-9 -34 -56 -85 -93 -100 -18 -8 -54 -14 -81 -14 l-48 0 17 68 c10 37 18 79 18 95 1 27 1 27 74 28 39 0 81 4 92 8 17 7 20 4 23 -27 2 -19 1 -45 -2 -58z m-461 -144 c23 -26 13 -68 -21 -80 -14 -6 -65 -10 -114 -10 -49 0 -100 4 -114 10 -30 11 -42 49 -26 79 10 20 19 21 134 21 109 0 125 -2 141 -20z m-858 -517 c80 -24 102 -27 248 -27 159 0 184 4 326 50 15 5 17 -8 21 -98 3 -56 8 -111 13 -120 7 -17 -14 -18 -359 -18 l-366 0 10 26 c6 14 10 68 10 120 0 52 2 94 5 94 3 0 44 -12 92 -27z m1690 -382 c44 -20 68 -49 82 -98 5 -17 -5 -270 -25 -638 -18 -336 -34 -631 -34 -657 l0 -48 -590 0 -590 0 6 27 c13 57 55 136 110 206 129 163 165 345 104 522 -39 113 -96 190 -194 262 -48 36 -66 43 -103 43 -38 0 -50 -5 -79 -34 l-34 -34 0 -194 c0 -106 -4 -199 -9 -206 -5 -9 -30 -12 -87 -10 l-79 3 -5 200 c-5 217 -11 238 -66 263 -64 30 -142 -3 -234 -99 -93 -97 -141 -220 -141 -364 0 -141 36 -236 131 -355 55 -67 95 -143 106 -198 l7 -32 -585 0 -585 0 -7 46 c-3 26 -6 75 -6 110 0 74 -13 108 -47 123 -34 16 -47 14 -78 -11 l-28 -22 6 -122 5 -123 -94 -3 -94 -3 0 139 c0 230 41 432 119 583 l30 58 1 -75 c2 -115 14 -181 36 -197 29 -21 84 -12 105 17 18 24 18 38 -3 411 -11 212 -18 398 -14 412 8 35 54 87 91 103 24 11 288 13 1430 13 1353 1 1401 0 1442 -18z m-1093 -701 c28 -58 31 -75 31 -155 0 -107 -24 -168 -105 -270 -63 -79 -104 -160 -127 -247 l-17 -68 -133 0 c-131 0 -133 0 -133 23 0 65 -65 204 -133 288 -88 109 -119 204 -105 326 4 35 19 86 33 115 26 51 80 118 97 118 4 0 8 -70 8 -155 0 -169 5 -188 57 -237 41 -39 74 -48 179 -48 135 0 189 25 225 105 15 33 19 67 19 195 l1 155 36 -40 c19 -22 50 -69 67 -105z m1377 -132 c51 -138 69 -257 69 -445 l0 -168 -90 3 -90 3 0 37 c0 59 30 611 36 672 l6 55 21 -40 c11 -22 33 -75 48 -117z m103 -787 c36 -34 36 -88 0 -122 l-26 -24 -1805 0 -1805 0 -24 28 c-26 30 -31 66 -13 98 27 50 -53 48 1861 46 l1786 -2 26 -24z"/>
+                                                            <path d="M3653 4740 c-46 -19 -57 -83 -20 -118 19 -18 35 -22 91 -22 58 0 70 3 91 25 14 13 25 31 25 39 0 28 -22 64 -47 75 -28 13 -109 14 -140 1z"/>
+                                                            <path d="M4023 4740 c-45 -18 -55 -72 -22 -114 l20 -26 360 0 c346 0 360 1 379 20 30 30 27 83 -6 109 -26 20 -37 21 -368 20 -187 0 -351 -4 -363 -9z"/>
+                                                            <path d="M3654 4386 c-48 -21 -60 -80 -24 -116 20 -20 33 -20 569 -20 l550 0 15 22 c23 32 20 81 -5 104 -20 18 -46 19 -548 21 -427 2 -532 0 -557 -11z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Customer Portal</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#A24482" stroke="none">
+                                                            <path d="M203 4942 c-250 -88 -272 -432 -35 -549 56 -27 61 -28 276 -33 l220 -5 372 -1585 c206 -872 380 -1603 389 -1626 23 -61 78 -119 143 -151 52 -26 68 -28 194 -31 l137 -4 -25 -37 c-60 -91 -87 -238 -65 -353 46 -233 256 -408 491 -408 235 0 445 175 491 408 22 115 -5 262 -66 354 l-25 38 430 0 430 0 -25 -38 c-61 -92 -88 -239 -66 -354 46 -233 256 -408 491 -408 235 0 445 175 491 408 22 114 -5 262 -65 352 l-24 36 57 12 c284 59 326 444 62 566 -46 21 -51 21 -1295 26 l-1250 5 -46 197 -47 198 1351 2 1351 3 51 27 c72 38 130 107 153 182 10 34 98 383 197 777 167 670 177 717 165 748 -28 66 111 61 -1880 61 -1715 0 -1810 1 -1815 18 -3 9 -55 231 -116 492 -67 288 -121 495 -136 527 -28 59 -78 107 -143 137 -44 20 -64 21 -406 23 -326 3 -365 1 -412 -15z m746 -197 c16 -8 33 -27 40 -42 6 -15 184 -766 396 -1668 212 -902 388 -1648 391 -1657 5 -17 76 -18 1304 -18 986 0 1305 -3 1325 -12 29 -13 55 -55 55 -88 0 -33 -26 -75 -55 -88 -20 -9 -351 -12 -1376 -12 -1475 0 -1393 -3 -1418 57 -6 15 -184 766 -396 1668 -212 902 -388 1648 -391 1658 -5 16 -27 17 -274 17 -290 0 -311 3 -336 51 -26 51 -10 109 37 135 37 20 659 20 698 -1z m1191 -1187 c1 -2 18 -137 39 -301 l37 -297 -304 2 -305 3 -68 290 c-38 160 -69 293 -69 298 0 6 669 11 670 5z m920 -158 c0 -174 7 -203 51 -226 52 -27 115 -8 137 41 8 17 12 83 12 185 l0 160 358 0 358 0 -37 -297 c-21 -164 -38 -299 -39 -300 0 -2 -81 -3 -180 -3 -195 0 -222 -6 -246 -51 -27 -52 -8 -115 41 -137 17 -8 85 -12 194 -12 l167 0 -37 -297 c-21 -164 -38 -299 -39 -300 0 -2 -121 -3 -270 -3 l-270 0 0 160 c0 174 -7 203 -51 226 -52 27 -115 8 -137 -41 -8 -17 -12 -83 -12 -185 l0 -160 -270 0 c-148 0 -270 1 -270 3 -1 1 -18 136 -39 300 l-37 297 168 0 c127 0 176 4 197 14 66 35 66 137 0 172 -21 11 -72 14 -209 14 -99 0 -180 1 -180 3 -1 1 -18 136 -39 300 l-37 297 358 0 358 0 0 -160z m1830 153 c0 -5 -33 -138 -73 -298 l-73 -290 -320 -3 -320 -2 37 297 c21 164 38 299 39 301 1 6 710 1 710 -5z m-2650 -795 c1 -2 18 -137 39 -301 l37 -297 -260 2 -261 3 -67 285 c-37 157 -68 291 -68 298 0 9 65 12 290 12 160 0 290 -1 290 -2z m2450 -3 c0 -3 -30 -125 -67 -271 -49 -196 -72 -273 -89 -293 l-22 -26 -254 -3 -254 -3 37 298 c21 164 38 299 39 301 0 4 610 2 610 -3z m-2256 -1829 c105 -51 161 -144 161 -266 0 -85 -21 -142 -74 -203 -82 -92 -237 -121 -353 -64 -160 79 -215 278 -118 430 80 126 246 170 384 103z m1660 0 c105 -51 161 -144 161 -266 0 -85 -21 -142 -74 -203 -82 -92 -237 -121 -353 -64 -160 79 -215 278 -118 430 80 126 246 170 384 103z"/>
+                                                            <path d="M3111 2946 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"/>
+                                                            <path d="M2251 746 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"/>
+                                                            <path d="M3911 746 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124 -149 87z"/>
+                                                            </g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Inventory</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                                   <div class="col-4">
+                                        <a href="SingleModule.html">
+                                            <div class="text-center p-3 related-app">
+                                                <span class="avatar avatar-sm avatar-rounded">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 512 512" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+                                                        <g><path style="opacity:0.967" fill="#BBA02D" d="M 244.5,-0.5 C 251.833,-0.5 259.167,-0.5 266.5,-0.5C 299.949,9.6838 314.949,32.3505 311.5,67.5C 361.455,87.2904 395.288,122.624 413,173.5C 416.357,184.283 418.69,195.283 420,206.5C 421.259,246.481 421.926,286.481 422,326.5C 422.903,327.701 424.069,328.535 425.5,329C 462.556,331.225 483.223,350.725 487.5,387.5C 485.233,418.231 469.233,437.398 439.5,445C 402.835,445.5 366.168,445.667 329.5,445.5C 323.577,481.421 302.911,503.421 267.5,511.5C 259.5,511.5 251.5,511.5 243.5,511.5C 208.089,503.421 187.423,481.421 181.5,445.5C 144.832,445.667 108.165,445.5 71.5,445C 39.4102,436.571 23.5768,415.738 24,382.5C 30.337,348.557 50.837,330.724 85.5,329C 86.9308,328.535 88.0975,327.701 89,326.5C 89.0782,285.149 89.7448,243.816 91,202.5C 101.258,136.618 137.258,91.2851 199,66.5C 196.33,31.7911 211.497,9.45775 244.5,-0.5 Z M 249.5,33.5 C 267.512,32.1803 277.179,40.5137 278.5,58.5C 263.175,55.965 247.842,55.965 232.5,58.5C 232.49,46.1558 238.157,37.8224 249.5,33.5 Z M 248.5,90.5 C 308.958,91.8305 351.792,119.831 377,174.5C 381.41,185.808 384.41,197.475 386,209.5C 386.951,251.528 387.951,293.528 389,335.5C 393.926,348.759 403.092,357.593 416.5,362C 423.181,362.94 429.847,363.94 436.5,365C 453.437,373.596 457.27,386.096 448,402.5C 444.579,406.458 440.412,409.292 435.5,411C 315.5,411.667 195.5,411.667 75.5,411C 58.7283,403.35 54.2283,391.183 62,374.5C 65.3148,370.182 69.4814,367.015 74.5,365C 91.7678,365.59 105.934,359.423 117,346.5C 119.551,342.065 121.551,337.399 123,332.5C 123.083,290.484 123.75,248.484 125,206.5C 134.059,152.546 164.226,116.046 215.5,97C 226.431,93.7554 237.431,91.5887 248.5,90.5 Z M 215.5,446.5 C 241.997,445.336 268.664,445.17 295.5,446C 286.93,470.957 269.597,480.957 243.5,476C 229.484,470.487 220.151,460.654 215.5,446.5 Z"/></g>
+        <g><path style="opacity:0.957" fill="#BBA02D" d="M 94.5,60.5 C 109.827,59.9917 116.66,67.325 115,82.5C 114,84.5 113,86.5 112,88.5C 83.471,116.876 64.8043,150.876 56,190.5C 46.3157,201.039 36.649,201.039 27,190.5C 25.4549,187.698 24.6215,184.698 24.5,181.5C 33.8589,135.941 54.8589,96.774 87.5,64C 89.9252,62.7874 92.2585,61.6207 94.5,60.5 Z"/></g>
+        <g><path style="opacity:0.957" fill="#BBA02D" d="M 407.5,60.5 C 416.857,59.5939 424.357,62.9272 430,70.5C 457.851,101.197 476.518,136.863 486,177.5C 487.112,189.567 481.612,196.567 469.5,198.5C 462.349,198.172 457.182,194.839 454,188.5C 447.572,159.516 435.572,133.182 418,109.5C 411.373,101.204 404.373,93.2038 397,85.5C 393.049,73.8183 396.549,65.485 407.5,60.5 Z"/></g>
+                                                        </svg>
+                                                </span>
+                                                <span class="d-block fs-12" style="margin-top: -2rem;">Notification</span>
+                                            </div>
+                                        </a>
+                                   </div>
+                               </div>
+                            </div>
+                            <div class="p-3 border-top">
+                                <div class="d-grid">
+                                    <a href="Modules.html" class="btn btn-primary">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element header-fullscreen">
+                        <!-- Start::header-link -->
+                        <a onclick="openFullscreen();" href="javascript:void(0);" class="header-link">
+                            <i class="bx bx-fullscreen full-screen-open header-link-icon"></i>
+                            <i class="bx bx-exit-fullscreen full-screen-close header-link-icon d-none"></i>
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <div class="me-sm-2 me-0">
+                                    <img src="assets/images/faces/9.jpg" alt="img" width="32" height="32" class="rounded-circle">
+                                </div>
+                                <div class="d-sm-block d-none">
+                                    <p class="fw-semibold mb-0 lh-1">Khaled Khalifa</p>
+                                    <span class="op-7 fw-normal d-block fs-11">System Admin</span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end" aria-labelledby="mainHeaderProfile">
+                            <li><a class="dropdown-item d-flex" href="profile.html"><i class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
+                            <li><a class="dropdown-item d-flex" href="mail.html"><i class="ti ti-inbox fs-18 me-2 op-7"></i>Inbox <span class="badge bg-success-transparent ms-auto">25</span></a></li>
+                            <li><a class="dropdown-item d-flex border-block-end" href="to-do-list.html"><i class="ti ti-clipboard-check fs-18 me-2 op-7"></i>Task Manager</a></li>
+                            <li><a class="dropdown-item d-flex" href="mail-settings.html"><i class="ti ti-adjustments-horizontal fs-18 me-2 op-7"></i>Settings</a></li>
+                            <li><a class="dropdown-item d-flex" href="chat.html"><i class="ti ti-headset fs-18 me-2 op-7"></i>Support</a></li>
+                            <li><a class="dropdown-item d-flex" href="sign-in-cover.html"><i class="ti ti-logout fs-18 me-2 op-7"></i>Log Out</a></li>
+                        </ul>
+                    </div>
+                    <!-- End::header-element -->
+
+                    
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+        
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Start::page-header -->
+
+                <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                    <div>
+                        <p class="fw-semibold fs-18 mb-0">Welcome back, Khaled Khalifa !</p>
+                        <span class="fs-semibold text-muted">Track your sales activity, leads and deals here.</span>
+                    </div>
+                    <div class="btn-list mt-md-0 mt-2">
+                        <button type="button" class="btn btn-primary btn-wave">
+                            <i class="ri-filter-3-fill me-2 align-middle d-inline-block"></i>Filters
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-wave">
+                            <i class="ri-upload-cloud-line me-2 align-middle d-inline-block"></i>Export
+                        </button>
+                    </div>
+                </div>
+
+                 <!-- End::page-header -->
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xxl-9 col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="card custom-card crm-highlight-card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <div class="fw-semibold fs-18 text-fixed-white mb-2">Your Tasks is incomplete</div>
+                                                        <span class="d-block fs-12 text-fixed-white"><span class="op-7">You have completed</span> <span class="fw-semibold text-warning">48%</span> <span class="op-7">of the given target, you can also check your status</span>.</span>
+                                                        <!-- <span class="d-block fw-semibold mt-1"><a class="text-fixed-white" href="javascript:void(0);"><u>Click here</u></a></span> -->
+                                                    </div>
+                                                    <div>
+                                                        <div id="crm-main"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="card custom-card">
+                                        <div class="card-header  justify-content-between">
+                                            <div class="card-title">
+                                                Coming Birthdates
+                                            </div>
+                                            <div class="dropdown">
+                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-light" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fe fe-more-vertical"></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Week</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Month</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Year</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled crm-top-deals mb-0">
+                                                <li>
+                                                    <div class="d-flex align-items-top flex-wrap">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-sm avatar-rounded">
+                                                                <img src="assets/images/faces/10.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0">Michael Jordan</p>
+                                                            <span class="text-muted fs-12">michael.jordan@example.com</span>
+                                                        </div>
+                                                        <div class="fw-semibold fs-15">Send a wish</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex align-items-top flex-wrap">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-sm avatar-rounded bg-warning-transparent fw-semibold">
+                                                                EK
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0">Emigo Kiaren</p>
+                                                            <span class="text-muted fs-12">emigo.kiaren@gmail.com</span>
+                                                        </div>
+                                                        <div class="fw-semibold fs-15">Send a wish</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex align-items-top flex-wrap">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-sm avatar-rounded">
+                                                                <img src="assets/images/faces/12.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0">Randy Origoan</p>
+                                                            <span class="text-muted fs-12">randy.origoan@gmail.com</span>
+                                                        </div>
+                                                        <div class="fw-semibold fs-15">Send a wish</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex align-items-top flex-wrap">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-sm avatar-rounded bg-success-transparent fw-semibold">
+                                                                GP
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0">George Pieterson</p>
+                                                            <span class="text-muted fs-12">george.pieterson@gmail.com</span>
+                                                        </div>
+                                                        <div class="fw-semibold fs-15">Send a wish</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex align-items-top flex-wrap">
+                                                        <div class="me-2">
+                                                            <span class="avatar avatar-sm avatar-rounded bg-primary-transparent fw-semibold">
+                                                                KA
+                                                            </span>
+                                                        </div>
+                                                        <div class="flex-fill">
+                                                            <p class="fw-semibold mb-0">Kiara Advain</p>
+                                                            <span class="text-muted fs-12">kiaraadvain214@gmail.com</span>
+                                                        </div>
+                                                        <div class="fw-semibold fs-15">Send a wish</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card custom-card">
+                                        <div class="card-header justify-content-between">
+                                            <div class="card-title">Profit Earned</div>
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0);" class="p-2 fs-12 text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">This Week</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Last Week</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body py-0 ps-0">
+                                            <div id="crm-profits-earned"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <div class="row">
+                                    <div class="col-xxl-6 col-lg-6 col-md-6">
+                                        <div class="card custom-card overflow-hidden">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-top justify-content-between">
+                                                    <div>
+                                                        <span class="avatar avatar-md avatar-rounded bg-primary">
+                                                            <i class="ti ti-users fs-16"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-fill ms-3">
+                                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                                            <div>
+                                                                <p class="text-muted mb-0">Total Delays</p>
+                                                                <h4 class="fw-semibold mt-1">12 Hours</h4>
+                                                            </div>
+                                                            <div id="crm-total-customers"></div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                                            <div>
+                                                                <a class="text-primary" href="javascript:void(0);">View All<i class="ti ti-arrow-narrow-right ms-2 fw-semibold d-inline-block"></i></a>
+                                                            </div>
+                                                            <div class="text-end">
+                                                                <p class="mb-0 text-success fw-semibold">+40%</p>
+                                                                <span class="text-muted op-7 fs-11">this month</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-6 col-lg-6 col-md-6">
+                                        <div class="card custom-card overflow-hidden">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-top justify-content-between">
+                                                    <div>
+                                                        <span class="avatar avatar-md avatar-rounded bg-secondary">
+                                                            <i class="ti ti-wallet fs-16"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-fill ms-3">
+                                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                                            <div>
+                                                                <p class="text-muted mb-0">Total Attends</p>
+                                                                <h4 class="fw-semibold mt-1">130 Hours</h4>
+                                                            </div>
+                                                            <div id="crm-total-revenue"></div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                                            <div>
+                                                                <a class="text-secondary" href="javascript:void(0);">View All<i class="ti ti-arrow-narrow-right ms-2 fw-semibold d-inline-block"></i></a>
+                                                            </div>
+                                                            <div class="text-end">
+                                                                <p class="mb-0 text-success fw-semibold">+25%</p>
+                                                                <span class="text-muted op-7 fs-11">this month</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-6 col-lg-6 col-md-6">
+                                        <div class="card custom-card overflow-hidden">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-top justify-content-between">
+                                                    <div>
+                                                        <span class="avatar avatar-md avatar-rounded bg-success">
+                                                            <i class="ti ti-wave-square fs-16"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-fill ms-3">
+                                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                                            <div>
+                                                                <p class="text-muted mb-0">Annual Balance</p>
+                                                                <h4 class="fw-semibold mt-1">6 Days </h4><small>Remain</small>
+                                                            </div>
+                                                            <div id="crm-conversion-ratio"></div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                                            <div>
+                                                                <a class="text-success" href="javascript:void(0);">View All<i class="ti ti-arrow-narrow-right ms-2 fw-semibold d-inline-block"></i></a>
+                                                            </div>
+                                                            <div class="text-end">
+                                                                <p class="mb-0 text-danger fw-semibold">-12%</p>
+                                                        <span class="text-muted op-7 fs-11">this month</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-6 col-lg-6 col-md-6">
+                                        <div class="card custom-card overflow-hidden">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-top justify-content-between">
+                                                    <div>
+                                                        <span class="avatar avatar-md avatar-rounded bg-warning">
+                                                            <i class="ti ti-briefcase fs-16"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-fill ms-3">
+                                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                                            <div>
+                                                                <p class="text-muted mb-0">Total Projects</p>
+                                                                <h4 class="fw-semibold mt-1">7</h4>
+                                                            </div>
+                                                            <div id="crm-total-deals"></div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center justify-content-between mt-1">
+                                                            <div>
+                                                                <a class="text-warning" href="javascript:void(0);">View All<i class="ti ti-arrow-narrow-right ms-2 fw-semibold d-inline-block"></i></a>
+                                                            </div>
+                                                            <div class="text-end">
+                                                                <p class="mb-0 text-success fw-semibold">+19%</p>
+                                                                <span class="text-muted op-7 fs-11">this month</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="card custom-card">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                   Employee KPIs
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="javascript:void(0);" class="p-2 fs-12 text-muted" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">This Week</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Last Week</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="content-wrapper">
+                                                    <div id="crm-revenue-analytics"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="card custom-card">
+                                    <div class="card-header justify-content-between">
+                                        <div class="card-title">
+                                            Deals Statistics
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <div>
+                                                <input class="form-control form-control-sm" type="text" placeholder="Search Here" aria-label=".form-control-sm example">
+                                            </div>
+                                            <div class="dropdown">
+                                                <a href="javascript:void(0);" class="btn btn-primary btn-sm btn-wave waves-effect waves-light" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Sort By<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">New</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Popular</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);">Relevant</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table text-nowrap table-hover border table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value="" aria-label="..."></th>
+                                                        <th scope="col">Sales Rep</th>
+                                                        <th scope="col">Category</th>
+                                                        <th scope="col">Mail</th>
+                                                        <th scope="col">Location</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel2" value="" aria-label="..."></th>
+                                                        <td>
+                                                            <div class="d-flex align-items-center fw-semibold">
+                                                                <span class="avatar avatar-sm me-2 avatar-rounded">
+                                                                    <img src="assets/images/faces/4.jpg" alt="img">
+                                                                </span>Mayor Kelly
+                                                            </div>
+                                                        </td>
+                                                        <td>Manufacture</td>
+                                                        <td>mayorkelly@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge bg-info-transparent">Germany</span>
+                                                        </td>
+                                                        <td>Sep 15 - Oct 12, 2023</td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-wave waves-effect waves-light btn-sm btn-success-light"><i class="ri-download-2-line"></i></a>
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-wave waves-effect waves-light btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel13" value="" aria-label="..." checked></th>
+                                                        <td>
+                                                            <div class="d-flex align-items-center fw-semibold">
+                                                                <span class="avatar avatar-sm me-2 avatar-rounded">
+                                                                    <img src="assets/images/faces/15.jpg" alt="img">
+                                                                </span>Andrew Garfield
+                                                            </div>
+                                                        </td>
+                                                        <td>Development</td>
+                                                        <td>andrewgarfield@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge bg-primary-transparent">Canada</span>
+                                                        </td>
+                                                        <td>Apr 10 - Dec 12, 2023</td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-success-light"><i class="ri-download-2-line"></i></a>
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel4" value="" aria-label="..."></th>
+                                                        <td>
+                                                            <div class="d-flex align-items-center fw-semibold">
+                                                                <span class="avatar avatar-sm me-2 avatar-rounded">
+                                                                    <img src="assets/images/faces/11.jpg" alt="img">
+                                                                </span>Simon Cowel
+                                                            </div>
+                                                        </td>
+                                                        <td>Service</td>
+                                                        <td>simoncowel234@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge bg-danger-transparent">Europe</span>
+                                                        </td>
+                                                        <td>Sep 15 - Oct 12, 2023</td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-success-light"><i class="ri-download-2-line"></i></a>
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel5" value="" aria-label="..." checked></th>
+                                                        <td>
+                                                            <div class="d-flex align-items-center fw-semibold">
+                                                                <span class="avatar avatar-sm me-2 avatar-rounded">
+                                                                    <img src="assets/images/faces/8.jpg" alt="img">
+                                                                </span>Mirinda Hers
+                                                            </div>
+                                                        </td>
+                                                        <td>Marketing</td>
+                                                        <td>mirindahers@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge bg-warning-transparent">USA</span>
+                                                        </td>
+                                                        <td>Apr 14 - Dec 14, 2023</td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-success-light"><i class="ri-download-2-line"></i></a>
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row" class="ps-4"><input class="form-check-input" type="checkbox" id="checkboxNoLabel3" value="" aria-label="..." checked></th>
+                                                        <td>
+                                                            <div class="d-flex align-items-center fw-semibold">
+                                                                <span class="avatar avatar-sm me-2 avatar-rounded">
+                                                                    <img src="assets/images/faces/9.jpg" alt="img">
+                                                                </span>Jacob Smith
+                                                            </div>
+                                                        </td>
+                                                        <td>Social Plataform</td>
+                                                        <td>jacobsmith@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge bg-success-transparent">Singapore</span>
+                                                        </td>
+                                                        <td>Feb 25 - Nov 25, 2023</td>
+                                                        <td>
+                                                            <div class="hstack gap-2 fs-15">
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-success-light"><i class="ri-download-2-line"></i></a>
+                                                                <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon waves-effect waves-light btn-sm btn-primary-light"><i class="ri-edit-line"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center">
+                                            <div>
+                                                Showing 5 Entries <i class="bi bi-arrow-right ms-2 fw-semibold"></i>
+                                            </div>
+                                            <div class="ms-auto">
+                                                <nav aria-label="Page navigation" class="pagination-style-4">
+                                                    <ul class="pagination mb-0">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="javascript:void(0);">
+                                                                Prev
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link text-primary" href="javascript:void(0);">
+                                                                next
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-12">
+                        <div class="row">
+                            <div class="col-xxl-12 col-xl-12">
+                                <div class="row">
+                                    <div class="col-xl-12 col-xl-6">
+                                        <div class="card custom-card">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                   Requests
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-sm btn-light" data-bs-toggle="dropdown">
+                                                        <i class="fe fe-more-vertical"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Week</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Month</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Year</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-body p-0 overflow-hidden">
+                                                <div class="leads-source-chart d-flex align-items-center justify-content-center">
+                                                    <canvas id="leads-source" class="chartjs-chart w-100 p-4"></canvas>
+                                                    <div class="lead-source-value">
+                                                        <!-- <span class="d-block fs-14">Total</span> -->
+                                                        <!-- <span class="d-block fs-25 fw-bold">4,145</span> -->
+                                                    </div>
+                                                </div>
+                                                <div class="row row-cols-12 border-top border-block-start-dashed">
+                                                    <div class="col p-0">
+                                                        <div class="ps-4 py-3 pe-3 text-center border-end border-inline-end-dashed">
+                                                            <span class="text-muted fs-12 mb-1 crm-lead-legend mobile d-inline-block">Mission
+                                                            </span>
+                                                            <div><span class="fs-16 fw-semibold">13</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0">
+                                                        <div class="p-3 text-center border-end border-inline-end-dashed">
+                                                            <span class="text-muted fs-12 mb-1 crm-lead-legend desktop d-inline-block">Permission
+                                                            </span>
+                                                            <div><span class="fs-16 fw-semibold">6</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0">
+                                                        <div class="p-3 text-center border-end border-inline-end-dashed">
+                                                            <span class="text-muted fs-12 mb-1 crm-lead-legend laptop d-inline-block">Vacation
+                                                            </span>
+                                                            <div><span class="fs-16 fw-semibold">22</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col p-0">
+                                                        <div class="p-3 text-center">
+                                                            <span class="text-muted fs-12 mb-1 crm-lead-legend tablet d-inline-block">OverTime
+                                                            </span>
+                                                            <div><span class="fs-16 fw-semibold">30</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-12 col-xl-6">
+                                        <div class="card custom-card">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                    Tasks Status
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="javascript:void(0);" class="p-2 fs-12 text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">This Week</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Last Week</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <h4 class="fw-bold mb-0">4,289</h4>
+                                                    <div class="ms-2">
+                                                        <span class="badge bg-success-transparent">1.02<i class="ri-arrow-up-s-fill align-mmiddle ms-1"></i></span>
+                                                        <span class="text-muted ms-1">compared to last week</span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-stacked progress-animate progress-xs mb-4">
+                                                    <div class="progress-bar" role="progressbar" style="width: 21%" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 26%" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <ul class="list-unstyled mb-0 pt-2 crm-deals-status">
+                                                    <li class="primary">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div>Closed</div>
+                                                            <div class="fs-12 text-muted">987  </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="info">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div>Pending</div>
+                                                            <div class="fs-12 text-muted">1,073  </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="warning">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div>In Progress</div>
+                                                            <div class="fs-12 text-muted">1,674  </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="success">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <div>Archived</div>
+                                                            <div class="fs-12 text-muted">921  </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-12 col-xl-6">
+                                        <div class="card custom-card">
+                                            <div class="card-header justify-content-between">
+                                                <div class="card-title">
+                                                    Recent Activity
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a href="javascript:void(0);" class="p-2 fs-12 text-muted" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">This Week</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Last Week</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div>
+                                                    <ul class="list-unstyled mb-0 crm-recent-activity">
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-primary-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span class="fw-semibold">Update of calendar events &amp;</span><span><a href="javascript:void(0);" class="text-primary fw-semibold"> Added new events in next week.</a></span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">4:45PM</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-secondary-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>New theme for <span class="fw-semibold">Spruko Website</span> completed</span>
+                                                                    <span class="d-block fs-12 text-muted">Lorem ipsum, dolor sit amet.</span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">3 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-success-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>Created a <span class="text-success fw-semibold">New Task</span> today <span class="avatar avatar-xs bg-purple-transparent avatar-rounded ms-1"><i class="ri-add-fill text-purple fs-12"></i></span></span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">22 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-pink-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>New member <span class="badge bg-pink-transparent">@andreas gurrero</span> added today to AI Summit.</span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">Today</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-warning-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>32 New people joined summit.</span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">22 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-info-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>Neon Tarly added <span class="text-info fw-semibold">Robert Bright</span> to AI summit project.</span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">12 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-dark-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>Replied to new support request <i class="ri-checkbox-circle-line text-success fs-16 align-middle"></i></span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">4 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="crm-recent-activity-content">
+                                                            <div class="d-flex align-items-top">
+                                                                <div class="me-3">
+                                                                    <span class="avatar avatar-xs bg-purple-transparent avatar-rounded">
+                                                                        <i class="bi bi-circle-fill fs-8"></i>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="crm-timeline-content">
+                                                                    <span>Completed documentation of <a href="javascript:void(0);" class="text-purple text-decoration-underline fw-semibold">AI Summit.</a></span>
+                                                                </div>
+                                                                <div class="flex-fill text-end">
+                                                                    <span class="d-block text-muted fs-11 op-7">4 hrs</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="input-group">
+                    <a href="javascript:void(0);" class="input-group-text" id="Search-Grid"><i class="fe fe-search header-link-icon fs-18"></i></a>
+                    <input type="search" class="form-control border-0 px-2" placeholder="Search" aria-label="Username">
+                    <a href="javascript:void(0);" class="input-group-text" id="voice-search"><i class="fe fe-mic header-link-icon"></i></a>
+                    <a href="javascript:void(0);" class="btn btn-light btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fe fe-more-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);">Separated link</a></li>
+                    </ul>
+                  </div>
+                  <div class="mt-4">
+                    <p class="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
+                    <span class="search-tags"><i class="fe fe-user me-2"></i>People<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                    <span class="search-tags"><i class="fe fe-file-text me-2"></i>Pages<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                    <span class="search-tags"><i class="fe fe-align-left me-2"></i>Articles<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                    <span class="search-tags"><i class="fe fe-server me-2"></i>Tags<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a></span>
+                  </div>
+                  <div class="my-4">
+                    <p class="font-weight-semibold text-muted mb-2">Recent Search :</p>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                      <a href="notifications.html"><span>Notifications</span></a>
+                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                    </div>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                      <a href="alerts.html"><span>Alerts</span></a>
+                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                    </div>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-0 alert">
+                      <a href="mail.html"><span>Mail</span></a>
+                      <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i class="fe fe-x text-muted"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="btn-group ms-auto">
+                    <button class="btn btn-sm btn-primary-light">Search</button>
+                    <button class="btn btn-sm btn-primary">Clear Recents</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span id="year"></span> <a
+                        href="javascript:void(0);" class="text-dark fw-semibold">ERPPlus</a>.
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+    </div>
+
+
+    <!-- Scroll To Top -->
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+    <!-- Scroll To Top -->
+
+    <!-- Popper JS -->
+    <script src="assets/libs/%40popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="assets/js/defaultmenu.min.js"></script>
+  
+
+    <!-- JSVector Maps JS -->
+    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="assets/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+    <!-- Apex Charts JS -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Chartjs Chart JS -->
+    <script src="assets/libs/chart.js/chart.min.js"></script>
+
+    <script src="assets/js/crm-dashboard.js"></script>
+
+
+    <!-- Custom-Switcher JS -->
+    <script src="assets/js/custom-switcher.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+
+
+    // Get the element with the class 'colored-div'
+   const EMPLOYEES = document.querySelector('.EMPLOYEES');
+   const AI = document.querySelector('.AI');
+   const Legal = document.querySelector('.Legal');
+   const Assets = document.querySelector('.Assets');
+   const notification = document.querySelector('.notification');
+   const Purchasing = document.querySelector('.Purchasing');
+   const inventory = document.querySelector('.inventory');
+   const ACCOUNTING = document.querySelector('.ACCOUNTING');
+   const invoice = document.querySelector('.invoice');
+   const CRM = document.querySelector('.CRM');
+   const Payroll = document.querySelector('.Payroll');
+   const Attendance = document.querySelector('.Attendance');
+   const PM = document.querySelector('.PM');
+   const CP = document.querySelector('.CP');
+   const VP = document.querySelector('.VP');
+   const SYS = document.querySelector('.SYS');
+  const colorEMPLOYEES = '#98868625';
+  const colorAI = '#BBBBBB25';
+  const colorLegal = '#224D5425';
+  const colorAssets = '#70669A25';
+  const colornotification = '#BBA02D25';
+  const colorPurchasing = '#A2448225';
+  const colorinventory = '#7D694425';
+  const colorACCOUNTING = '#8f947d25';
+  const colorinvoice = '#362D6A25';
+  const colorCRM = '#566ca125';
+  const colorPayroll = '#3e745c25';
+  const colorAttendance = '#8F5A6025';
+  const colorPM = '#85894E25';
+  const colorCP = '#946D5025';
+  const colorVP = '#757E7B25';
+  const colorSYS = '#354B7A25';
+  
+
+   // Add event listeners for hover
+   EMPLOYEES.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorEMPLOYEES.slice(0, -2);
+      EMPLOYEES.style.backgroundColor = newColor;
+   });
+
+   EMPLOYEES.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       EMPLOYEES.style.backgroundColor = colorEMPLOYEES;
+   });
+ 
+    // Add event listeners for hover
+    AI.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorAI.slice(0, -2);
+      AI.style.backgroundColor = newColor;
+   });
+
+   AI.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       AI.style.backgroundColor = colorAI;
+   });
+ 
+    // Add event listeners for hover
+    Legal.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorLegal.slice(0, -2);
+      Legal.style.backgroundColor = newColor;
+   });
+
+   Legal.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       Legal.style.backgroundColor = colorLegal;
+   });
+ 
+    // Add event listeners for hover
+    Assets.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorAssets.slice(0, -2);
+      Assets.style.backgroundColor = newColor;
+   });
+
+   Assets.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       Assets.style.backgroundColor = colorAssets;
+   });
+ 
+    // Add event listeners for hover
+    notification.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colornotification.slice(0, -2);
+      notification.style.backgroundColor = newColor;
+   });
+
+   notification.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       notification.style.backgroundColor = colornotification;
+   });
+ 
+    // Add event listeners for hover
+    Purchasing.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorPurchasing.slice(0, -2);
+      Purchasing.style.backgroundColor = newColor;
+   });
+
+   Purchasing.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       Purchasing.style.backgroundColor = colorPurchasing;
+   });
+ 
+    // Add event listeners for hover
+    inventory.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorinventory.slice(0, -2);
+      inventory.style.backgroundColor = newColor;
+   });
+
+   inventory.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       inventory.style.backgroundColor = colorinventory;
+   });
+ 
+    // Add event listeners for hover
+    ACCOUNTING.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorACCOUNTING.slice(0, -2);
+      ACCOUNTING.style.backgroundColor = newColor;
+   });
+
+   ACCOUNTING.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       ACCOUNTING.style.backgroundColor = colorACCOUNTING;
+   });
+ 
+    // Add event listeners for hover
+    invoice.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorinvoice.slice(0, -2);
+      invoice.style.backgroundColor = newColor;
+   });
+
+   invoice.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       invoice.style.backgroundColor = colorinvoice;
+   });
+ 
+    // Add event listeners for hover
+    CRM.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorCRM.slice(0, -2);
+      CRM.style.backgroundColor = newColor;
+   });
+
+   CRM.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       CRM.style.backgroundColor = colorCRM;
+   });
+ 
+    // Add event listeners for hover
+    SYS.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorSYS.slice(0, -2);
+      SYS.style.backgroundColor = newColor;
+   });
+
+   SYS.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       SYS.style.backgroundColor = colorSYS;
+   });
+ 
+    // Add event listeners for hover
+    VP.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorVP.slice(0, -2);
+      VP.style.backgroundColor = newColor;
+   });
+
+   VP.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       VP.style.backgroundColor = colorVP;
+   });
+ 
+    // Add event listeners for hover
+    CP.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorCP.slice(0, -2);
+      CP.style.backgroundColor = newColor;
+   });
+
+   CP.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       CP.style.backgroundColor = colorCP;
+   });
+ 
+    // Add event listeners for hover
+    PM.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorPM.slice(0, -2);
+      PM.style.backgroundColor = newColor;
+   });
+
+   PM.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       PM.style.backgroundColor = colorPM;
+   });
+ 
+    // Add event listeners for hover
+    Attendance.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorAttendance.slice(0, -2);
+      Attendance.style.backgroundColor = newColor;
+   });
+
+   Attendance.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       Attendance.style.backgroundColor = colorAttendance;
+   });
+ 
+    // Add event listeners for hover
+    Payroll.addEventListener('mouseover', () => {
+      // Remove the last two characters from the color value on hover
+      const newColor = colorPayroll.slice(0, -2);
+      Payroll.style.backgroundColor = newColor;
+   });
+
+   Payroll.addEventListener('mouseout', () => {
+       // Restore the original color on mouseout
+       Payroll.style.backgroundColor = colorPayroll;
+   });
+ 
+ 
+ 
+    </script>
+</body>
+
+
+</html>
