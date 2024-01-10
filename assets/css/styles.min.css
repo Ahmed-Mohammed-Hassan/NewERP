@@ -12027,7 +12027,7 @@ button {
     }
 }
 
-@media (max-width:575.98px) {
+/*@media (max-width:575.98px) {
 
     .cart-dropdown,
     .header-fullscreen,
@@ -12036,7 +12036,7 @@ button {
     .timelines-dropdown {
         display: none !important
     }
-}
+}*/
 
 .btn-close:focus {
     box-shadow: none !important
