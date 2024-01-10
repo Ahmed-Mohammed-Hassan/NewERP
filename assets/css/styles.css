@@ -9588,7 +9588,7 @@ button {
 }
 /* Start::Switcher */
 /* Start:Responsive Dropdowns */
-@media (max-width: 575.98px) {
+/*@media (max-width: 575.98px) {
   .cart-dropdown,
   .timelines-dropdown,
   .notifications-dropdown,
@@ -9596,7 +9596,7 @@ button {
   .header-fullscreen {
     display: none !important;
   }
-}
+}*/
 /* End:Responsive Dropdowns */
 /* Start::Close Button */
 .btn-close:focus {
